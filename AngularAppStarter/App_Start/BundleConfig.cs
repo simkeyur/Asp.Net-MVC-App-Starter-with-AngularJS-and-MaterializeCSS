@@ -19,13 +19,20 @@ namespace AngularAppStarter
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
+            bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
+                      "~/Scripts/angular.min.js",
+                      "~/Scripts/Controllers/appController.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/materialize").Include(
+                      "~/Scripts/materialize.js",
+                      "~/Scripts/custom/init.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/materialize.css",
+                      "~/Content/icon.css",
                       "~/Content/site.css"));
+            
         }
     }
 }
